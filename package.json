@@ -8,9 +8,9 @@
     "start": "npm-run-all --parallel start:*",
     "start:app": "nodemon server.js",
     "start:sync": "browser-sync start --proxy http://localhost:3000 --host site.example --open external --files 'server.js' 'public'",
-    "lint": "eslint . --ext js --report-unused-disable-directives --max-warnings 0",
-    "format": "prettier --write src/",
-    "fix": "npm run format && npm run lint"
+    "fix:lint": "eslint . --ext js --report-unused-disable-directives --max-warnings 0",
+    "fix:format": "prettier --write *.js",
+    "fix": "npm-run-all fix:*"
   },
   "keywords": [],
   "author": "",

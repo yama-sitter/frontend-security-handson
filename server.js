@@ -5,7 +5,7 @@ const port = 3000;
 
 app.use(express.static('public'));
 
-app.get('/', (req, res, next) => {
+app.get('/', (_, res) => {
   res.end('Top Page');
 });
 
